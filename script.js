@@ -9,6 +9,10 @@ for (let i = 0; i < buttons.length; i++) {
 // declare a global variable to use it every time the user clicks on =
 let count = 0;
 function calc(e) {
+  let audio = new Audio();
+  audio.src = './click.mp3';
+  audio.play();
+
   // it checks if the count = 1, which means the user clicked '='
   // it resets the calculator and counter to '0'
   // in order to avoid the result number to the next calculation
