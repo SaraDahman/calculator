@@ -29,10 +29,8 @@ function calc(e) {
     e.target.textContent.match(/[*/+-]/) &&
     result.value[result.value.length - 1].match(/[*/+-]/)
   ) {
-    result.value = result.value.replace(
-      result.value[result.value.length - 1],
-      e.target.textContent
-    );
+    result.value =
+      result.value.slice(0, result.value.length - 1) + e.target.textContent;
   }
   // if the user clicks '=', it displays the result, and increment the counter
   else if (e.target.textContent === '=') {
